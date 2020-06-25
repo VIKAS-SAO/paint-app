@@ -27,16 +27,15 @@ window.addEventListener('load',function(){
        ctx.lineTo(e.clientX,e.clientY)
        ctx.stroke( )
        ctx.beginPath( )
-       ctx.moveTo(e.clientX,e.clientY)
-
-
-
-
+       ctx.moveTo(e.clientX,e.clientY) 
    }
+
    canvas.addEventListener('mousedown',startPosition)
    canvas.addEventListener('mouseup',finishPosition)
    canvas.addEventListener('mousemove',draw)
-   
+   canvas.addEventListener('ontouchstart',startPosition)
+   canvas.addEventListener('ontouchend',finishPosition)
+   canvas.addEventListener('ontouchmove',draw)
 
    
 
